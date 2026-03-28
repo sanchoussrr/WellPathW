@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WellPath — Your Path to Wellness. A mobile app ecosystem for health & well-being: mental health, nutrition, sleep, habits and fitness.">
+  <meta name="keywords" content="WellPath, wellness, mental health, nutrition, sleep, fitness, habits, mobile app">
+  <meta name="author" content="WellPath Team">
+  <title>WellPath — Your Path to Wellness</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <img src="assets/company.jpg" alt="WellPath" style="width:220px;height:auto;display:block;mix-blend-mode:lighten;filter:brightness(1.05);">
+    </div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- Particles -->
+  <div class="pts" id="pts"></div>
+  <div class="float-shapes" id="floatShapes"></div>
+
+  <!-- Progress bar -->
+  <div class="prog" id="prog"></div>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo-wrap" href="#">
+      <img src="assets/company.jpg" alt="WellPath" style="height:32px;width:auto;display:block;mix-blend-mode:lighten;filter:brightness(1.05);">
+    </a>
+    <div class="nav-center" id="navLinks">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#platform" data-i18n="nav.platform">Platform</a>
+      <a href="#app" data-i18n="nav.app">App</a>
+      <a href="#team" data-i18n="nav.team">Team</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="ua">UA</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+    </div>
+    <div class="nav-mob" id="navMob" onclick="document.getElementById('navLinks').classList.toggle('mob-open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-g1"></div>
+      <div class="hero-g2"></div>
+      <div class="hero-g3"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-glow-orb"></div>
+      <div class="hero-glow-orb"></div>
+    </div>
+    <div class="hero-c">
+      <div class="hero-logo-wrap" style="margin-bottom:36px;animation:fadeUp .9s var(--ease) .2s both">
+        <img src="assets/company.jpg" alt="WellPath" style="width:340px;height:auto;display:block;mix-blend-mode:lighten;filter:brightness(1.05);">
+      </div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-i18n="hero.badge">Your Path to Wellness · 2026</span>
+      </div>
+      <h1><span class="gr" data-i18n="hero.h1">WellPath</span></h1>
+      <p class="hero-sub" data-i18n="hero.sub">We build a mobile app ecosystem for health &amp; well-being. Mental health, nutrition, sleep, habits and fitness — all in one platform.</p>
+      <div class="hero-stats">
+        <div class="h-stat">
+          <div class="n" data-count="5">0</div>
+          <div class="l" data-i18n="hero.projects">Projects</div>
+        </div>
+        <div class="h-stat">
+          <div class="n" data-count="16000" data-suffix="+">0</div>
+          <div class="l" data-i18n="hero.code">Lines of Code</div>
+        </div>
+        <div class="h-stat">
+          <div class="n" data-count="20" data-suffix="+">0</div>
+          <div class="l" data-i18n="hero.screens">Screens</div>
+        </div>
+        <div class="h-stat">
+          <div class="n" data-count="3">0</div>
+          <div class="l" data-i18n="hero.langs">Languages</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="number-marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item"><span class="mi">✦</span> Mental Health</div>
+      <div class="marquee-item"><span class="mi">✦</span> Nutrition</div>
+      <div class="marquee-item"><span class="mi">✦</span> Sleep Quality</div>
+      <div class="marquee-item"><span class="mi">✦</span> Fitness</div>
+      <div class="marquee-item"><span class="mi">✦</span> Habit Tracking</div>
+      <div class="marquee-item"><span class="mi">✦</span> Mindfulness</div>
+      <div class="marquee-item"><span class="mi">✦</span> Breathing</div>
+      <div class="marquee-item"><span class="mi">✦</span> Self-Care</div>
+      <div class="marquee-item"><span class="mi">✦</span> Psychology</div>
+      <div class="marquee-item"><span class="mi">✦</span> Wellness Ecosystem</div>
+      <div class="marquee-item"><span class="mi">✦</span> Mental Health</div>
+      <div class="marquee-item"><span class="mi">✦</span> Nutrition</div>
+      <div class="marquee-item"><span class="mi">✦</span> Sleep Quality</div>
+      <div class="marquee-item"><span class="mi">✦</span> Fitness</div>
+      <div class="marquee-item"><span class="mi">✦</span> Habit Tracking</div>
+      <div class="marquee-item"><span class="mi">✦</span> Mindfulness</div>
+      <div class="marquee-item"><span class="mi">✦</span> Breathing</div>
+      <div class="marquee-item"><span class="mi">✦</span> Self-Care</div>
+      <div class="marquee-item"><span class="mi">✦</span> Psychology</div>
+      <div class="marquee-item"><span class="mi">✦</span> Wellness Ecosystem</div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="divider"></div>
+  <section class="sec" id="about">
+    <div class="sec-in">
+      <div class="about-grid">
+        <div class="rv-l">
+          <div class="sec-lbl" data-i18n="about.label">About Us</div>
+          <div class="sec-ttl">
+            <span data-i18n="about.title_1">We are </span>
+            <span class="gr" data-i18n="about.title_2">WellPath</span>
+          </div>
+          <div class="about-text">
+            <h3 data-i18n="about.mission_title">Mission</h3>
+            <p data-i18n="about.mission">Help people understand themselves clearly, reduce anxiety and build a stable, focused mindset in a world of constant comparison. We believe everyone deserves accessible tools for mental and physical health.</p>
+            <h3 style="margin-top:22px" data-i18n="about.vision_title">Vision</h3>
+            <p data-i18n="about.vision">Become a global platform for mindfulness and self-care in the digital age — through an ecosystem of apps that help people feel better every day.</p>
+            <p class="about-quote" data-i18n="about.quote">"WellPath is not just apps. It's a movement for conscious living without toxic comparison."</p>
+          </div>
+        </div>
+        <div class="about-vis rv-r">
+          <div class="about-orb about-orb-1"></div>
+          <div class="about-orb about-orb-2"></div>
+          <div class="about-orb about-orb-3"></div>
+          <div class="about-card about-card-1">
+            <div class="ic">🧠</div>
+            <h4 data-i18n="about.card1_title">Psychology + Technology</h4>
+            <p data-i18n="about.card1_desc">Scientific approach to mental health through mobile apps</p>
+          </div>
+          <div class="about-card about-card-2">
+            <div class="ic">📱</div>
+            <h4 data-i18n="about.card2_title">Mobile-First</h4>
+            <p data-i18n="about.card2_desc">React Native + Expo for iOS, Android & Web simultaneously</p>
+          </div>
+          <div class="about-card about-card-3">
+            <div class="ic">🌍</div>
+            <h4 data-i18n="about.card3_title">Global Reach</h4>
+            <p data-i18n="about.card3_desc">USA → EU → Canada, Australia, UAE, Singapore</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="values-grid stagger-children rv">
+        <div class="value-card animated-border">
+          <span class="value-ic">💡</span>
+          <h4 data-i18n="val.v1_title">Innovation</h4>
+          <p data-i18n="val.v1_desc">Cutting-edge technology meets psychology to create tools people actually use every day.</p>
+        </div>
+        <div class="value-card animated-border">
+          <span class="value-ic">🤝</span>
+          <h4 data-i18n="val.v2_title">Accessibility</h4>
+          <p data-i18n="val.v2_desc">Everyone deserves mental health support. Our apps are designed to be affordable and inclusive.</p>
+        </div>
+        <div class="value-card animated-border">
+          <span class="value-ic">🔒</span>
+          <h4 data-i18n="val.v3_title">Privacy First</h4>
+          <p data-i18n="val.v3_desc">Your data is yours. End-to-end encryption and transparent privacy policies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <div class="divider"></div>
+  <section class="sec" id="projects">
+    <div class="sec-in">
+      <div class="rv">
+        <div class="sec-lbl" data-i18n="proj.label">Product Ecosystem</div>
+        <div class="sec-ttl" data-i18n="proj.title">Our Projects</div>
+        <div class="sec-desc" data-i18n="proj.desc">ReflexMe — our first live product. We are building a complete app ecosystem with shared infrastructure, unified user base and cross-product synergy.</div>
+      </div>
+
+      <!-- ReflexMe -->
+      <div class="proj rv animated-border" style="transition-delay:.1s">
+        <div class="glow" style="background:rgba(59,110,232,.08);top:-80px;right:-80px"></div>
+        <div class="proj-hd">
+          <div class="proj-ic" style="background:rgba(59,110,232,.08)">🧠</div>
+          <div class="proj-hd-txt">
+            <h3>ReflexMe</h3>
+            <div class="cat" data-i18n="proj.r.cat">Mental Health · Wellness Companion</div>
+            <div class="proj-st st-live">
+              <span class="dot"></span>
+              <span data-i18n="proj.r.status">Live MVP · 16,000+ lines</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-desc" data-i18n="proj.r.desc">ReflexMe is a mental wellness app that helps people reflect, understand their emotions, keep a mood journal, breathe properly and analyze cognitive patterns. The user takes a psychological test during onboarding, gets a personal profile and uses a set of tools for daily self-work. The app includes psychology articles, exercises, affirmations, breathing techniques and a habit tracker — all in a minimalist, calm design.</div>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <h4><span class="ci">✨</span> <span data-i18n="proj.r.col1_title">Key Features</span></h4>
+            <ul>
+              <li data-i18n="proj.r.f1">Psychological onboarding test: 5 pattern categories, personal results & recommendations</li>
+              <li data-i18n="proj.r.f2">24/7 chat therapist: empathic sessions with crisis detection and multilingual support</li>
+              <li data-i18n="proj.r.f3">Mood analytics: daily log with insights, trends and weekly/monthly charts</li>
+              <li data-i18n="proj.r.f4">Reflection journal: structured diary for thoughts, feelings and observations</li>
+              <li data-i18n="proj.r.f5">4 breathing techniques: Box Breathing, 4-7-8, Coherent Breathing, Energizing</li>
+              <li data-i18n="proj.r.f6">90+ affirmations across categories for daily practice with notifications</li>
+              <li data-i18n="proj.r.f7">Habit tracker: create, track & analyze with habit loop (trigger → action → reward)</li>
+              <li data-i18n="proj.r.f8">Achievement system and gamification to keep users motivated</li>
+            </ul>
+          </div>
+          <div class="proj-col">
+            <h4><span class="ci">📚</span> <span data-i18n="proj.r.col2_title">Content & Capabilities</span></h4>
+            <ul>
+              <li data-i18n="proj.r.c1">40+ psychology articles: anxiety, self-esteem, comparison, productivity, burnout</li>
+              <li data-i18n="proj.r.c2">15+ exercises for mental health: meditations, visualizations, mindfulness practices</li>
+              <li data-i18n="proj.r.c3">3 interface languages: English, Russian, Ukrainian. Planned expansion to 8+</li>
+              <li data-i18n="proj.r.c4">Subscription system: Free / Premium ($5/mo) / Ultra ($8/mo) via RevenueCat</li>
+              <li data-i18n="proj.r.c5">Push notifications for practice, breathing and reflection reminders</li>
+              <li data-i18n="proj.r.c6">Dark and light theme with smooth animations</li>
+              <li data-i18n="proj.r.c7">Email verification, password recovery, guest mode</li>
+              <li data-i18n="proj.r.c8">Screens: Privacy Policy, Terms of Use, subscriptions, profile, editing — 20+</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-met stagger-children rv">
+          <div class="pm"><div class="pv">16K+</div><div class="pl" data-i18n="proj.r.m1">Lines of Code</div></div>
+          <div class="pm"><div class="pv">20+</div><div class="pl" data-i18n="proj.r.m2">Screens</div></div>
+          <div class="pm"><div class="pv">3</div><div class="pl" data-i18n="proj.r.m3">Languages</div></div>
+          <div class="pm"><div class="pv">90+</div><div class="pl" data-i18n="proj.r.m4">Affirmations</div></div>
+          <div class="pm"><div class="pv">40+</div><div class="pl" data-i18n="proj.r.m5">Articles</div></div>
+          <div class="pm"><div class="pv">15+</div><div class="pl" data-i18n="proj.r.m6">Exercises</div></div>
+        </div>
+        <div class="proj-tech">
+          <div class="tech-t">React Native</div>
+          <div class="tech-t">Expo SDK 54</div>
+          <div class="tech-t">React 19</div>
+          <div class="tech-t">Node.js + Express</div>
+          <div class="tech-t">Firebase Auth</div>
+          <div class="tech-t">Cloud Firestore</div>
+          <div class="tech-t">Cloud Storage</div>
+          <div class="tech-t">RevenueCat</div>
+          <div class="tech-t">Render Cloud</div>
+          <div class="tech-t">Helmet + CORS</div>
+          <div class="tech-t">Rate Limiting</div>
+        </div>
+      </div>
+
+      <!-- NutriMe -->
+      <div class="proj rv animated-border" style="transition-delay:.15s">
+        <div class="glow" style="background:rgba(102,187,106,.06);top:-80px;left:-80px"></div>
+        <div class="proj-hd">
+          <div class="proj-ic" style="background:rgba(102,187,106,.08)">🥗</div>
+          <div class="proj-hd-txt">
+            <h3>NutriMe</h3>
+            <div class="cat" data-i18n="proj.n.cat">Nutrition · Personal Dietitian</div>
+            <div class="proj-st st-dev">
+              <span class="dot"></span>
+              <span data-i18n="proj.n.status">Planned · R&D</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-desc" data-i18n="proj.n.desc">NutriMe is a mindful eating app. Users set goals, allergies and preferences — and receive personalized meal plans, recipes and daily calorie tracking. Includes food recognition via camera, automatic nutrient calculation and weekly reports.</div>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <h4><span class="ci">🎯</span> <span data-i18n="proj.n.col1_title">Core Features</span></h4>
+            <ul>
+              <li data-i18n="proj.n.f1">Personal onboarding: goals, weight, height, age, activity, allergies, preferences</li>
+              <li data-i18n="proj.n.f2">Meal plan generation for day/week based on parameters and budget</li>
+              <li data-i18n="proj.n.f3">Calorie counting: manual entry, barcode scanning, camera recognition</li>
+              <li data-i18n="proj.n.f4">Macro (protein, fat, carbs) and micronutrient (vitamins, minerals) tracking</li>
+              <li data-i18n="proj.n.f5">500+ recipe library with diet filters (keto, vegan, paleo, etc.)</li>
+              <li data-i18n="proj.n.f6">Shopping list — auto-generated from weekly meal plan</li>
+            </ul>
+          </div>
+          <div class="proj-col">
+            <h4><span class="ci">📊</span> <span data-i18n="proj.n.col2_title">Analytics & Features</span></h4>
+            <ul>
+              <li data-i18n="proj.n.c1">Weekly reports: calorie trends, macros progress, recommendations</li>
+              <li data-i18n="proj.n.c2">Water balance: hydration tracker with reminders throughout the day</li>
+              <li data-i18n="proj.n.c3">Food diary: full meal history with any period overview</li>
+              <li data-i18n="proj.n.c4">ReflexMe integration: emotional state and eating habits correlation</li>
+              <li data-i18n="proj.n.c5">Social features: share recipes and progress with friends</li>
+              <li data-i18n="proj.n.c6">Scheduled notifications for meals, snacks and water balance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <div class="tech-t">React Native</div>
+          <div class="tech-t">Computer Vision</div>
+          <div class="tech-t">Barcode Scanning</div>
+          <div class="tech-t">Nutrition API</div>
+          <div class="tech-t">Firebase</div>
+          <div class="tech-t">Meal Planner Engine</div>
+        </div>
+      </div>
+
+      <!-- FreeMe -->
+      <div class="proj rv animated-border" style="transition-delay:.2s">
+        <div class="glow" style="background:rgba(239,83,80,.05);top:-80px;right:-80px"></div>
+        <div class="proj-hd">
+          <div class="proj-ic" style="background:rgba(239,83,80,.06)">🚭</div>
+          <div class="proj-hd-txt">
+            <h3>FreeMe</h3>
+            <div class="cat" data-i18n="proj.f.cat">Addiction Recovery · Recovery Support</div>
+            <div class="proj-st st-plan">
+              <span class="dot"></span>
+              <span data-i18n="proj.f.status">Planned</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-desc" data-i18n="proj.f.desc">FreeMe is for people who want to break free from addictions: smoking, alcohol, social media, sugar, caffeine. Combines a sobriety tracker, crisis support system, trigger mapping and anonymous community.</div>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <h4><span class="ci">🛡️</span> <span data-i18n="proj.f.col1_title">Core Features</span></h4>
+            <ul>
+              <li data-i18n="proj.f.f1">Sobriety tracker: days, hours, minutes without bad habit, visual milestones & rewards</li>
+              <li data-i18n="proj.f.f2">Trigger mapping: identifying situations, emotions and places that provoke relapse</li>
+              <li data-i18n="proj.f.f3">Crisis button: instant access to self-help techniques, breathing, motivation</li>
+              <li data-i18n="proj.f.f4">Personal strategies: action plans for each trigger with step-by-step instructions</li>
+              <li data-i18n="proj.f.f5">Progress journal: record feelings, victories, relapses — without judgment</li>
+              <li data-i18n="proj.f.f6">Savings calculator: money and health saved by quitting the habit</li>
+            </ul>
+          </div>
+          <div class="proj-col">
+            <h4><span class="ci">👥</span> <span data-i18n="proj.f.col2_title">Community & Motivation</span></h4>
+            <ul>
+              <li data-i18n="proj.f.c1">Anonymous community: support from people with the same experience</li>
+              <li data-i18n="proj.f.c2">Achievement & badge system: gamified progress for motivation</li>
+              <li data-i18n="proj.f.c3">Weekly and monthly reports: relapse patterns, improvements, trends</li>
+              <li data-i18n="proj.f.c4">ReflexMe integration: emotional state and craving correlation</li>
+              <li data-i18n="proj.f.c5">Motivational push notifications during "danger" hours</li>
+              <li data-i18n="proj.f.c6">Multi-addiction support with separate trackers for each</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <div class="tech-t">React Native</div>
+          <div class="tech-t">Firebase</div>
+          <div class="tech-t">Community Engine</div>
+          <div class="tech-t">Trigger Mapping</div>
+          <div class="tech-t">Gamification</div>
+          <div class="tech-t">Push Notifications</div>
+        </div>
+      </div>
+
+      <!-- DreamMe -->
+      <div class="proj rv animated-border" style="transition-delay:.25s">
+        <div class="glow" style="background:rgba(126,87,194,.05);top:-80px;left:-80px"></div>
+        <div class="proj-hd">
+          <div class="proj-ic" style="background:rgba(126,87,194,.06)">😴</div>
+          <div class="proj-hd-txt">
+            <h3>DreamMe</h3>
+            <div class="cat" data-i18n="proj.d.cat">Sleep · Recovery · Relaxation</div>
+            <div class="proj-st st-plan">
+              <span class="dot"></span>
+              <span data-i18n="proj.d.status">Planned</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-desc" data-i18n="proj.d.desc">DreamMe is a sleep quality improvement app. Poor sleep is the root of many problems: from anxiety to low productivity. DreamMe helps fall asleep faster, sleep deeper and wake up energized.</div>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <h4><span class="ci">🌙</span> <span data-i18n="proj.d.col1_title">Core Features</span></h4>
+            <ul>
+              <li data-i18n="proj.d.f1">Sleep tracking: automatic phase detection (light, deep, REM) via phone sensors</li>
+              <li data-i18n="proj.d.f2">Smart alarm: wake up in optimal phase within set window</li>
+              <li data-i18n="proj.d.f3">Sound library: white/pink/brown noise, nature, rain, ocean — 50+ tracks</li>
+              <li data-i18n="proj.d.f4">Bedtime meditations: 10+ guided meditations for relaxation</li>
+              <li data-i18n="proj.d.f5">4-7-8 falling asleep technique: breathing with visual guide</li>
+              <li data-i18n="proj.d.f6">Sleep stories: relaxing stories for adults as a sleep method</li>
+            </ul>
+          </div>
+          <div class="proj-col">
+            <h4><span class="ci">📈</span> <span data-i18n="proj.d.col2_title">Analytics & Integrations</span></h4>
+            <ul>
+              <li data-i18n="proj.d.c1">Detailed analytics: duration, quality, time to fall asleep, awakenings</li>
+              <li data-i18n="proj.d.c2">Weekly reports with trends and recommendations</li>
+              <li data-i18n="proj.d.c3">Sleep score: personal sleep quality rating on a 100-point scale</li>
+              <li data-i18n="proj.d.c4">Integration with Apple Health and Google Fit</li>
+              <li data-i18n="proj.d.c5">Evening ritual: bedtime preparation checklist</li>
+              <li data-i18n="proj.d.c6">ReflexMe integration: sleep and emotional state correlation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <div class="tech-t">React Native</div>
+          <div class="tech-t">Sleep Tracking</div>
+          <div class="tech-t">Audio Engine</div>
+          <div class="tech-t">HealthKit / Google Fit</div>
+          <div class="tech-t">Smart Alarm</div>
+          <div class="tech-t">Firebase</div>
+        </div>
+      </div>
+
+      <!-- FitMe -->
+      <div class="proj rv animated-border" style="transition-delay:.3s">
+        <div class="glow" style="background:rgba(255,112,67,.05);top:-80px;right:-80px"></div>
+        <div class="proj-hd">
+          <div class="proj-ic" style="background:rgba(255,112,67,.06)">💪</div>
+          <div class="proj-hd-txt">
+            <h3>FitMe</h3>
+            <div class="cat" data-i18n="proj.fit.cat">Fitness · Personal Trainer</div>
+            <div class="proj-st st-plan">
+              <span class="dot"></span>
+              <span data-i18n="proj.fit.status">Planned</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-desc" data-i18n="proj.fit.desc">FitMe is a personal fitness trainer in your pocket. Generates individual workout programs based on goals, fitness level and equipment.</div>
+        <div class="proj-cols">
+          <div class="proj-col">
+            <h4><span class="ci">🏋️</span> <span data-i18n="proj.fit.col1_title">Core Features</span></h4>
+            <ul>
+              <li data-i18n="proj.fit.f1">Personalized programs: workouts for goals, level and equipment</li>
+              <li data-i18n="proj.fit.f2">200+ exercises with video demos of proper technique</li>
+              <li data-i18n="proj.fit.f3">Workout timer: countdown, rest between sets, total time</li>
+              <li data-i18n="proj.fit.f4">Progressive overload: automatic difficulty increase</li>
+              <li data-i18n="proj.fit.f5">Warmup and stretching: built-in blocks before and after workouts</li>
+              <li data-i18n="proj.fit.f6">Workout calendar: weekly/monthly planning with reminders</li>
+            </ul>
+          </div>
+          <div class="proj-col">
+            <h4><span class="ci">🏆</span> <span data-i18n="proj.fit.col2_title">Motivation & Analytics</span></h4>
+            <ul>
+              <li data-i18n="proj.fit.c1">Stats: volume load, workout count, working weights, progress</li>
+              <li data-i18n="proj.fit.c2">Social challenges: compete with friends</li>
+              <li data-i18n="proj.fit.c3">Streaks and badges for consistency</li>
+              <li data-i18n="proj.fit.c4">NutriMe integration: nutrition for workout type</li>
+              <li data-i18n="proj.fit.c5">DreamMe integration: sleep for heavy workouts</li>
+              <li data-i18n="proj.fit.c6">Body tracking: weight, measurements, progress photos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proj-tech">
+          <div class="tech-t">React Native</div>
+          <div class="tech-t">Workout Engine</div>
+          <div class="tech-t">Video Player</div>
+          <div class="tech-t">Progress Tracker</div>
+          <div class="tech-t">Social Features</div>
+          <div class="tech-t">Firebase</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Ecosystem -->
+  <div class="divider"></div>
+  <section class="platform" id="platform">
+    <div class="sec-lbl rv" data-i18n="plat.label">Unified Platform</div>
+    <div class="sec-ttl rv" style="margin-bottom:12px">
+      <span data-i18n="plat.title_1">One Ecosystem. </span>
+      <span class="gr" data-i18n="plat.title_2">All Connected.</span>
+    </div>
+    <p class="rv" style="max-width:640px;margin:0 auto 56px;text-align:center;color:var(--text2);font-size:15px;line-height:1.8" data-i18n="plat.desc">All WellPath apps share a single account, unified data layer and cross-product analytics. Your mental health, nutrition, sleep, habits and fitness data work together — giving you a complete picture of your well-being.</p>
+
+    <div class="plat-hub rv">
+      <!-- Central WellPath node -->
+      <div class="plat-center">
+        <img src="assets/company.jpg" alt="WellPath" style="width:100px;height:auto;mix-blend-mode:lighten;filter:brightness(1.05);">
+        <div class="plat-pulse"></div>
+        <div class="plat-pulse" style="animation-delay:.5s"></div>
+      </div>
+
+      <!-- Connector lines (SVG) -->
+      <svg class="plat-lines" viewBox="0 0 600 400" fill="none">
+        <line x1="300" y1="200" x2="300" y2="40" stroke="var(--accent)" stroke-width="1" opacity=".2" stroke-dasharray="4 4"/>
+        <line x1="300" y1="200" x2="100" y2="120" stroke="var(--accent)" stroke-width="1" opacity=".2" stroke-dasharray="4 4"/>
+        <line x1="300" y1="200" x2="500" y2="120" stroke="var(--accent)" stroke-width="1" opacity=".2" stroke-dasharray="4 4"/>
+        <line x1="300" y1="200" x2="130" y2="320" stroke="var(--accent)" stroke-width="1" opacity=".2" stroke-dasharray="4 4"/>
+        <line x1="300" y1="200" x2="470" y2="320" stroke="var(--accent)" stroke-width="1" opacity=".2" stroke-dasharray="4 4"/>
+      </svg>
+
+      <!-- App nodes -->
+      <div class="plat-app" style="top:0;left:50%;transform:translateX(-50%)">
+        <div class="plat-app-ic" style="background:rgba(196,168,130,.1)">🧠</div>
+        <span>ReflexMe</span>
+        <small>Mental Health</small>
+      </div>
+      <div class="plat-app" style="top:80px;left:8%">
+        <div class="plat-app-ic" style="background:rgba(76,175,80,.1)">🥗</div>
+        <span>NutriMe</span>
+        <small>Nutrition</small>
+      </div>
+      <div class="plat-app" style="top:80px;right:8%">
+        <div class="plat-app-ic" style="background:rgba(239,83,80,.1)">🛡️</div>
+        <span>FreeMe</span>
+        <small>Recovery</small>
+      </div>
+      <div class="plat-app" style="bottom:0;left:14%">
+        <div class="plat-app-ic" style="background:rgba(126,87,194,.1)">😴</div>
+        <span>DreamMe</span>
+        <small>Sleep</small>
+      </div>
+      <div class="plat-app" style="bottom:0;right:14%">
+        <div class="plat-app-ic" style="background:rgba(255,112,67,.1)">💪</div>
+        <span>FitMe</span>
+        <small>Fitness</small>
+      </div>
+    </div>
+
+    <div class="plat-features rv">
+      <div class="plat-feat animated-border">
+        <div style="font-size:28px;margin-bottom:10px">👤</div>
+        <h4 data-i18n="plat.f1_title">Shared Accounts</h4>
+        <p data-i18n="plat.f1_desc">One login across all WellPath apps. Your profile, preferences and subscriptions sync everywhere.</p>
+      </div>
+      <div class="plat-feat animated-border">
+        <div style="font-size:28px;margin-bottom:10px">📊</div>
+        <h4 data-i18n="plat.f2_title">Cross-Product Analytics</h4>
+        <p data-i18n="plat.f2_desc">See how sleep affects mood, how nutrition impacts fitness — unified insights from all your data.</p>
+      </div>
+      <div class="plat-feat animated-border">
+        <div style="font-size:28px;margin-bottom:10px">🔗</div>
+        <h4 data-i18n="plat.f3_title">Unified Data Layer</h4>
+        <p data-i18n="plat.f3_desc">Firebase backend, shared database and real-time sync between all apps in the ecosystem.</p>
+      </div>
+      <div class="plat-feat animated-border">
+        <div style="font-size:28px;margin-bottom:10px">✨</div>
+        <h4 data-i18n="plat.f4_title">Smart Recommendations</h4>
+        <p data-i18n="plat.f4_desc">AI-powered suggestions that combine data from all apps for truly personalized wellness guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Showcase -->
+  <div class="divider"></div>
+  <section class="app-showcase" id="app">
+    <div class="app-inner">
+      <div class="app-mockup rv-l">
+        <div class="phone-glow"></div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- Realistic ReflexMe UI -->
+            <div class="real-phone">
+              <!-- Status Bar -->
+              <div class="rp-status-bar">
+                <span>9:41</span>
+                <div style="display:flex;gap:4px;align-items:center">
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="#E8DDD0"><rect x="0" y="6" width="2.5" height="4" rx="0.5"/><rect x="3.5" y="4" width="2.5" height="6" rx="0.5"/><rect x="7" y="2" width="2.5" height="8" rx="0.5"/><rect x="10.5" y="0" width="2.5" height="10" rx="0.5"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="#E8DDD0"><path d="M7 1.5C9.5 1.5 11.7 2.8 13 4.8L12 5.5C10.9 3.8 9.1 2.7 7 2.7S3.1 3.8 2 5.5L1 4.8C2.3 2.8 4.5 1.5 7 1.5Z"/><path d="M7 4C8.6 4 10 4.8 10.8 6L9.8 6.7C9.2 5.7 8.2 5 7 5S4.8 5.7 4.2 6.7L3.2 6C4 4.8 5.4 4 7 4Z"/><circle cx="7" cy="8" r="1.5"/></svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x="0.5" y="0.5" width="16" height="9" rx="2" stroke="#E8DDD0" stroke-width="1"/><rect x="17.5" y="3" width="2" height="4" rx="1" fill="#E8DDD0"/><rect x="2" y="2" width="10" height="6" rx="1" fill="#C4A882"/></svg>
+                </div>
+              </div>
+
+              <!-- App Header -->
+              <div class="rp-header">
+                <div style="display:flex;align-items:center;gap:10px">
+                  <div style="width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#C4A882,#8B7355);display:flex;align-items:center;justify-content:center;font-size:18px">🧠</div>
+                  <div>
+                    <div style="font-weight:700;font-size:16px;color:#E8DDD0">ReflexMe</div>
+                    <div style="font-size:10px;color:#C4A882">Your Wellness Companion</div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:6px">
+                  <div style="width:28px;height:28px;border-radius:8px;background:rgba(196,168,130,.1);display:flex;align-items:center;justify-content:center;font-size:13px">🔔</div>
+                  <div style="width:28px;height:28px;border-radius:8px;background:rgba(196,168,130,.1);display:flex;align-items:center;justify-content:center;font-size:13px">⚙️</div>
+                </div>
+              </div>
+
+              <!-- Chat Messages -->
+              <div class="rp-chat-container">
+                <div class="rp-msg rp-msg-ai">
+                  <div class="rp-msg-avatar">🧠</div>
+                  <div class="rp-msg-bubble">
+                    <div style="font-size:9px;color:#C4A882;margin-bottom:3px">AI Therapist</div>
+                    Hi! I'm your personal wellness companion. How are you feeling today? 💛
+                  </div>
+                </div>
+                <div class="rp-msg rp-msg-user">
+                  <div class="rp-msg-bubble rp-msg-bubble-user">
+                    I'm feeling a bit anxious today, but trying to stay positive 🌿
+                  </div>
+                </div>
+                <div class="rp-msg rp-msg-ai">
+                  <div class="rp-msg-avatar">🧠</div>
+                  <div class="rp-msg-bubble">
+                    That's completely valid. Let's try a breathing exercise to help you feel calmer. Ready? 🌬️
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mood Section -->
+              <div class="rp-mood-section">
+                <div style="font-size:11px;font-weight:600;color:#E8DDD0;margin-bottom:8px">How are you feeling?</div>
+                <div class="rp-mood-grid">
+                  <div class="rp-mood-btn">😊</div>
+                  <div class="rp-mood-btn">😌</div>
+                  <div class="rp-mood-btn rp-mood-active">😰</div>
+                  <div class="rp-mood-btn">😢</div>
+                  <div class="rp-mood-btn">😡</div>
+                  <div class="rp-mood-btn">🥰</div>
+                </div>
+              </div>
+
+              <!-- Quick Actions -->
+              <div class="rp-quick-actions">
+                <div class="rp-action-btn">
+                  <span>📓</span>
+                  <small>Journal</small>
+                </div>
+                <div class="rp-action-btn">
+                  <span>🌬️</span>
+                  <small>Breathe</small>
+                </div>
+                <div class="rp-action-btn">
+                  <span>📚</span>
+                  <small>Articles</small>
+                </div>
+                <div class="rp-action-btn">
+                  <span>✅</span>
+                  <small>Habits</small>
+                </div>
+              </div>
+
+              <!-- Bottom Nav -->
+              <div class="rp-bottom-nav">
+                <div class="rp-nav-item rp-nav-active">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#C4A882"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                  <span>Home</span>
+                </div>
+                <div class="rp-nav-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#6B6058"><circle cx="12" cy="12" r="10" fill="none" stroke="#6B6058" stroke-width="2"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="#6B6058" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
+                  <span>Mood</span>
+                </div>
+                <div class="rp-nav-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#6B6058" stroke-width="2"/><path d="M12 8v4l2 2" stroke="#6B6058" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>Breathe</span>
+                </div>
+                <div class="rp-nav-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#6B6058" stroke-width="2"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#6B6058" stroke-width="2"/></svg>
+                  <span>Profile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app-features rv-r">
+        <div class="sec-lbl" data-i18n="app.label">Live Product</div>
+        <div class="sec-ttl" style="margin-bottom:8px">
+          <span data-i18n="app.title_1">ReflexMe is </span>
+          <span class="gr" data-i18n="app.title_2">Ready</span>
+        </div>
+        <p style="font-size:14px;color:var(--text2);margin-bottom:28px;line-height:1.8" data-i18n="app.desc">Our flagship app is built and ready. 20+ screens, 16,000+ lines of code, a full backend and a real product — crafted from scratch by our team.</p>
+        <div class="app-feat animated-border">
+          <div class="app-feat-ic">🧠</div>
+          <div>
+            <h4 data-i18n="app.f1_title">Psychological Test</h4>
+            <p data-i18n="app.f1_desc">5-category onboarding with personalized results and recommendations</p>
+          </div>
+        </div>
+        <div class="app-feat animated-border">
+          <div class="app-feat-ic">💬</div>
+          <div>
+            <h4 data-i18n="app.f2_title">AI Chat Therapist</h4>
+            <p data-i18n="app.f2_desc">24/7 empathic conversations with crisis detection and multilingual support</p>
+          </div>
+        </div>
+        <div class="app-feat animated-border">
+          <div class="app-feat-ic">📊</div>
+          <div>
+            <h4 data-i18n="app.f3_title">Mood Analytics</h4>
+            <p data-i18n="app.f3_desc">Daily tracking with insights, trends and beautiful weekly/monthly charts</p>
+          </div>
+        </div>
+        <div class="app-feat animated-border">
+          <div class="app-feat-ic">🌬️</div>
+          <div>
+            <h4 data-i18n="app.f4_title">Breathing & Exercises</h4>
+            <p data-i18n="app.f4_desc">4 breathing techniques, 15+ exercises and 90+ affirmations for daily wellness</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <div class="divider"></div>
+  <section class="sec" id="team">
+    <div class="sec-in">
+      <div class="rv" style="text-align:center">
+        <div class="sec-lbl" style="justify-content:center" data-i18n="team.label">Team</div>
+        <div class="sec-ttl" style="text-align:center" data-i18n="team.title">Founders</div>
+        <div class="sec-desc" style="text-align:center;margin:0 auto 56px" data-i18n="team.desc">The people behind WellPath — building the future of accessible health and well-being</div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card rv-l animated-border">
+          <img class="team-avatar" src="assets/Kozyr.jpg" alt="Nikita Kozyr">
+          <h3>Nikita Kozyr</h3>
+          <div class="team-role">Co-Founder · First Investor · Vision</div>
+          <a href="https://www.linkedin.com/in/kozyrnikita/" target="_blank" rel="noopener noreferrer" class="team-li">
+            <span style="font-weight:900">in</span> LinkedIn
+          </a>
+          <ul>
+            <li data-i18n="team.k1">Strategic vision & product direction</li>
+            <li data-i18n="team.k2">Investor relations & fundraising</li>
+            <li data-i18n="team.k3">Business development & partnerships</li>
+            <li data-i18n="team.k4">Market analysis & growth strategy</li>
+          </ul>
+        </div>
+        <div class="team-card rv-r animated-border">
+          <img class="team-avatar" src="assets/Boziyev.jpg" alt="Alex Boziyev">
+          <h3>Alex Boziyev</h3>
+          <div class="team-role">Co-Founder · CPO · Tech Lead</div>
+          <a href="https://www.linkedin.com/in/alex-boziyev-rakovskyy-55b371292/" target="_blank" rel="noopener noreferrer" class="team-li">
+            <span style="font-weight:900">in</span> LinkedIn
+          </a>
+          <ul>
+            <li data-i18n="team.b1">Full-stack development (React Native)</li>
+            <li data-i18n="team.b2">Integrations & backend architecture</li>
+            <li data-i18n="team.b3">Web development & system design</li>
+            <li data-i18n="team.b4">Security & cloud infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="divider"></div>
+  <section class="cta">
+    <div class="rv">
+      <div class="cta-logo-wrap" style="margin-bottom:28px">
+        <img src="assets/company.jpg" alt="WellPath" style="width:200px;height:auto;display:block;margin:0 auto;mix-blend-mode:lighten;filter:brightness(1.05);">
+      </div>
+      <div class="cta-ttl"><span class="gr">WellPath</span></div>
+      <div class="cta-sub" data-i18n="cta.sub">Let's make health and well-being accessible to everyone, together.</div>
+      <div class="cta-btns">
+        <a href="https://www.linkedin.com/in/kozyrnikita/" target="_blank" rel="noopener noreferrer" class="cta-b pri"><span><strong>in</strong> Nikita Kozyr</span></a>
+        <a href="https://www.linkedin.com/in/alex-boziyev-rakovskyy-55b371292/" target="_blank" rel="noopener noreferrer" class="cta-b pri"><span><strong>in</strong> Alex Boziyev</span></a>
+        <a href="https://tiktok.com/@reflexmeapp" target="_blank" rel="noopener noreferrer" class="cta-b sec">TikTok @reflexmeapp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 WellPath. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
